@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановление пароля</title>
+    <link type="text/css" rel="stylesheet" href="../styles/recover.css">
+</head>
+<body>
+
+<div class="recover-card">
+    <div class="logo">
+        <div class="logo-icon">T</div>
+        <div class="logo-text">Tech<span>Store</span></div>
+    </div>
+
+    <h1>Восстановление пароля</h1>
+    <p class="subtitle">
+        Укажите email, привязанный к аккаунту, — мы отправим ссылку для сброса пароля
+    </p>
+
+    <form id="recoverForm" novalidate>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-10 6L2 7"/>
+                </svg>
+            </div>
+            <div class="error-message" id="emailError">Введите корректный email</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="recoverSubmit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Отправить ссылку
+        </button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <div class="success-content">
+            <strong>Письмо отправлено!</strong>
+            <span>Проверьте почту <em id="sentEmail"></em> и перейдите по ссылке из письма.</span>
+        </div>
+    </div>
+
+    <div class="divider">вспомнили пароль?</div>
+
+    <button type="button" class="btn btn-secondary" id="loginBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Войти
+    </button>
+</div>
+
+<script type="module" src="../scripts/recover.js"></script>
+</body>
+</html>
