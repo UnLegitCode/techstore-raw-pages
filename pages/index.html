@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">T</div>
+            <div class="logo-text">Tech<span>Store</span></div>
+        </a>
+
+        <div class="search">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <label>
+                <input type="text" id="searchInput" placeholder="Поиск товаров…">
+            </label>
+        </div>
+
+        <nav class="header-actions">
+            <button class="icon-btn" id="cartBtn" aria-label="Корзина">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+            <a href="login.html" class="btn btn-outline btn-sm">Войти</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Регистрация</a>
+        </nav>
+    </div>
+</header>
+
+<section class="categories">
+    <div class="container">
+        <div class="section-head">
+            <h2>Категории</h2>
+            <p>Выберите, что вас интересует</p>
+        </div>
+
+        <div class="category-grid" id="categoryGrid">
+
+        </div>
+    </div>
+</section>
+
+<section class="catalog" id="catalog">
+    <div class="container">
+        <div class="section-head">
+            <h2>Популярные товары</h2>
+            <p>Хиты продаж этого месяца</p>
+        </div>
+
+        <div class="filters" id="filters">
+            <button class="filter-chip active" data-filter="all">Все</button>
+            <button class="filter-chip" data-filter="smartphones">Смартфоны</button>
+            <button class="filter-chip" data-filter="laptops">Ноутбуки</button>
+            <button class="filter-chip" data-filter="tablets">Планшеты</button>
+            <button class="filter-chip" data-filter="audio">Аудио</button>
+            <button class="filter-chip" data-filter="accessories">Аксессуары</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <p>Ничего не найдено</p>
+            <span>Попробуйте изменить запрос или фильтр</span>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"/>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                    </svg>
+                </div>
+                <h3>Быстрая доставка</h3>
+                <p>По всей стране за 1–3 дня</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Гарантия 2 года</h3>
+                <p>Официальная гарантия на всю технику</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                    </svg>
+                </div>
+                <h3>Возврат 14 дней</h3>
+                <p>Без вопросов и лишних формальностей</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <h3>Выгодные цены</h3>
+                <p>Регулярные акции и рассрочка 0%</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+    </svg>
+    <span id="toastText">Добавлено в корзину</span>
+</div>
+
+<script type="module" src="../scripts/index.js"></script>
+</body>
+</html>
